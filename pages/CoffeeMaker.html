@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../icons/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <script src="../javascript/base.js"></script>
+    <title>Coffee Maker</title>
+</head>
+<body>
+    <section class="section1" id="section1">
+        <nav class="nav1" id="nav1">
+            <div class="logo"><a href="../index.html">PYO<span>SHOP</span></a></div>
+            <ul class="menu" id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#collection">Collection</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" data-theme-toggle type="button"></button>
+                <button class="icon-btn menu_toggle" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+
+        <div class="product_info">
+
+
+            <div class="product_text_form">
+                <h1 class="name_pro">Keurig Coffee Maker</h1>
+                <div class="prix"><span class="old">150$</span><span class="price_pro">90.99$</span></div>
+                <p class="montivation">Hurry! Only 5 pieces left in stock!</p>
+                <form action="../index.php" method="post">
+                    <input type="hidden" name="product" value="Keurig Coffee Maker">
+                    <legend>Order this piece</legend>
+                    <div class="inputs">
+                        <input type="tel" required name="phone" placeholder="Phone">
+                        <input type="text" name="full_name" required placeholder="Full name">
+                        <input type="text" name="city" required placeholder="City">
+                    </div>
+                    <div class="numbers">
+                        <div class="numbers_items">
+                            <div class="plus" onclick="moin()">-</div>
+                            <input type="number" id="number" name="quantity" value="1" min="1" max="99" required>
+                            <div class="mines" onclick="plus()">+</div>
+                        </div>
+                    </div>
+                    <input type="submit" class="submit" value="Place order">
+                </form>
+            </div>
+
+
+            <div class="product_images">
+                <div class="pro_image">
+                    <img id="photo" src="../images/product1/pro1.jpg" alt="">
+                </div>
+                <div class="seconds_images">
+                    <div><img src="../images/product1/pro1.jpg" onclick="change(this.src)" alt=""></div>
+                    <div><img src="../images/product1/pro2.jpg" onclick="change(this.src)" alt=""></div>
+                    <div><img src="../images/product1/pro3.jpg" onclick="change(this.src)" alt=""></div>
+                    <div><img src="../images/product1/pro4.jpg" onclick="change(this.src)" alt=""></div>
+                    <div><img src="../images/product1/pro5.jpg" onclick="change(this.src)" alt=""></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="information information1">
+            
+
+            <div class="product-container">
+                <div class="product-basic">
+                    <h1>Brand: Keurig</h1>
+                    <p><strong>Color:</strong> Gray</p>
+                    <p><strong>Product Dimensions:</strong> 10.12"D x 14.84"W x 14.41"H</p>
+                    <p><strong>Special Feature:</strong> Removable Tank</p>
+                    <p><strong>Coffee Maker Type:</strong> Drip Coffee Machine</p>
+                </div>
+        
+                <div class="product-highlights">
+                    <div>
+                        <img src="../images/product1/p1.svg" alt="Capacity Icon">
+                        <p>Capacity</p>
+                        <p>66 Fluid Ounces</p>
+                    </div>
+                    <div>
+                        <img src="../images/product1/p3.svg" alt="Material Icon">
+                        <p>Material</p>
+                        <p>Plastic</p>
+                    </div>
+                    <div>
+                        <img src="../images/product1/p2.svg" alt="Weight Icon">
+                        <p>Item Weight</p>
+                        <p>5.78 Pounds</p>
+                    </div>
+                    <div>
+                        <img src="../images/product1/93.svg" alt="Wattage Icon">
+                        <p>Wattage</p>
+                        <p>400 Watts</p>
+                    </div>
+                </div>
+                <div class="product-features">
+                    <h2>About this item</h2>
+                    <ul>
+                        <li>MULTISTREAM TECHNOLOGY: Extracts more flavor and aroma* in every brew.</li>
+                        <li>CUSTOMIZE YOUR CUP: Brew a stronger cup, or brew hot over ice for refreshing iced coffee.</li>
+                        <li>MULTIPLE BREW SIZES: Brew a 6, 8, 10, or 12 oz. cup.</li>
+                        <li>66 oz. DUAL-POSITION RESERVOIR: Choose the perfect position for optimal counter space.</li>
+                        <li>FAST & FRESH-BREWED: Coffee made in minutes.</li>
+                        <li>BACK-TO-BACK BREWING: Immediately brew a second cup, no need to wait for reheating.</li>
+                        <li>TRAVEL MUG FRIENDLY: Accommodates travel mugs up to 7” tall.</li>
+                        <li>SIMPLE BUTTON CONTROLS: Just insert any K-Cup pod and use the button controls to brew.</li>
+                        <li>MAINTENANCE ALERT: Reminds you to descale after every 250 brews.</li>
+                        <li>COMPATIBLE WITH THE MY K-CUP UNIVERSAL REUSABLE COFFEE FILTER: Brew your own ground coffee (sold separately).</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </section>
+    <section class="section4" id="section4">
+        <div class="fe-box">
+            <img src="../images/f1.png" alt="f1">
+            <h6>Free Shipping</h6>
+            
+        </div>
+        <div class="fe-box">
+            <img src="../images/f2.png" alt="f1">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="../images/f3.png" alt="f1">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="../images/f4.png" alt="f1">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="../images/f5.png" alt="f1">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="../images/f6.png" alt="f1">
+            <h6>24/7 support</h6>
+        </div>
+    </section>
+
+    <section class="section5" id="section5">
+        <div class="logo"><a href="">PYO<span>SHOP</span></a></div>
+
+        <div class="content">
+            <div class="col" id="contactinfo">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> Morocco </p>
+                <p><strong>Phone:</strong> 0610781044 </p>
+                
+            </div>
+
+
+            <div class="col" id="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+
+            <div class="col" id="aboutinfo">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Primary Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+    
+            <div class="col" id="acountinfo">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">Track My Orders</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>&copy; 2025 PyoShop. All Rights Reserved.</p>
+    </footer>
+
+    <div class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+    <script src="../javascript/product.js"></script>
+</body>
+</html>

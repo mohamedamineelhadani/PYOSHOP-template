@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYOSHOP</title>
+    <link rel="icon" href="icons/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="javascript/base.js"></script>
+</head>
+<body>
+
+    <nav class="nav1" id="nav1">
+        <div class="logo"><a href="index.html">PYO<span>SHOP</span></a></div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="pages/categores.html">Categories</a></li>
+            <li><a href="pages/contact.html">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="icon-btn" id="nav-search" type="button" aria-label="Search the collection"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="icon-btn" data-theme-toggle type="button"></button>
+            <button class="icon-btn cart-btn" id="open-cart" type="button" aria-label="Open cart"><i class="fa-solid fa-bag-shopping"></i><span class="count" id="cart-count">0</span></button>
+            <button class="icon-btn menu_toggle" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- HERO CAROUSEL -->
+    <header class="hero" id="hero">
+        <div class="slides">
+            <div class="slide">
+                <div class="slide-inner">
+                    <div>
+                        <h1>Welcome to <em>PYOSHOP</em></h1>
+                        <p>Shop with confidence. Delivery is free, and you can pay when your order arrives.</p>
+                        <a class="btn" href="#collection">View the collection</a>
+                    </div>
+                    <div class="slide-art"><img src="images/sliders/slider1.png" alt=""></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-inner">
+                    <div>
+                        <h1>Quality you can <em>inspect</em>, with a guarantee</h1>
+                        <p>You pay nothing until your order is in your hands.</p>
+                        <a class="btn" href="#collection">View the collection</a>
+                    </div>
+                    <div class="slide-art"><img src="images/sliders/slider2.png" alt=""></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-inner">
+                    <div>
+                        <h1>Considered offers on pieces <em>worth owning</em></h1>
+                        <p>High quality products at prices set well below their original value.</p>
+                        <a class="btn" href="#collection">View the collection</a>
+                    </div>
+                    <div class="slide-art"><img src="images/sliders/slider3.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-ui">
+            <button class="arrow" data-prev type="button" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="dots"></div>
+            <button class="arrow" data-next type="button" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="socialmedia" aria-hidden="true">
+            <i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-whatsapp"></i>
+        </div>
+    </header>
+
+    <!-- COLLECTION: search, filters and grid are rendered by shop.js from the PRODUCTS array -->
+    <section class="section2" id="collection">
+        <div class="text" data-reveal>
+            <h2>Featured collection</h2>
+            <p>Our current selection</p>
+        </div>
+        <div class="toolbar" data-reveal>
+            <label class="search-field">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="search" placeholder="Search by name or category" autocomplete="off" aria-label="Search products">
+            </label>
+            <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+            <p class="result-count" id="result-count" aria-live="polite"></p>
+        </div>
+        <div class="products" id="grid"></div>
+    </section>
+
+    <!-- TESTIMONIALS (sample copy: replace with real customer quotes) -->
+    <section class="testimonials" id="testimonials">
+        <div class="wrap" data-reveal>
+            <span class="eyebrow">Customer notes</span>
+            <h2>What our customers say</h2>
+            <div class="slides">
+                <figure class="slide quote">
+                    <blockquote>The coffee maker arrived two days early and was packed better than most furniture. Paying on delivery made the decision easy.</blockquote>
+                    <figcaption>Salma B.<span>Casablanca</span></figcaption>
+                </figure>
+                <figure class="slide quote">
+                    <blockquote>I asked about the headset's microphone twice. Both times I got a clear, honest answer within the hour.</blockquote>
+                    <figcaption>Youssef A.<span>Rabat</span></figcaption>
+                </figure>
+                <figure class="slide quote">
+                    <blockquote>The watch tracks everything I need, and the strap feels far more expensive than it was.</blockquote>
+                    <figcaption>Imane K.<span>Marrakech</span></figcaption>
+                </figure>
+                <figure class="slide quote">
+                    <blockquote>A serious laptop at a fair price, from a shop whose support actually picks up the phone.</blockquote>
+                    <figcaption>Omar R.<span>Tangier</span></figcaption>
+                </figure>
+            </div>
+            <div class="carousel-ui">
+                <button class="arrow" data-prev type="button" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="dots"></div>
+                <button class="arrow" data-next type="button" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section4" id="section4">
+        <div class="fe-box" data-reveal style="--i:0"><img src="images/f1.png" alt=""><h6>Free Shipping</h6></div>
+        <div class="fe-box" data-reveal style="--i:1"><img src="images/f2.png" alt=""><h6>Online Order</h6></div>
+        <div class="fe-box" data-reveal style="--i:2"><img src="images/f3.png" alt=""><h6>Save Money</h6></div>
+        <div class="fe-box" data-reveal style="--i:3"><img src="images/f4.png" alt=""><h6>Promotions</h6></div>
+        <div class="fe-box" data-reveal style="--i:4"><img src="images/f5.png" alt=""><h6>Happy Sell</h6></div>
+        <div class="fe-box" data-reveal style="--i:5"><img src="images/f6.png" alt=""><h6>24/7 support</h6></div>
+    </section>
+
+    <section class="section5" id="section5">
+        <div class="logo"><a href="index.html">PYO<span>SHOP</span></a></div>
+        <div class="content">
+            <div class="col" id="contactinfo">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> Morocco</p>
+                <p><strong>Phone:</strong> 0610781044</p>
+            </div>
+            <div class="col" id="follow">
+                <h4>Follow Us</h4>
+                <div class="icon"><i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-whatsapp"></i></div>
+            </div>
+            <div class="col" id="aboutinfo">
+                <h4>About</h4>
+                <a href="#">About Us</a><a href="#">Delivery Information</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="pages/contact.html">Contact Us</a>
+            </div>
+            <div class="col" id="acountinfo">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a><a href="#" onclick="document.getElementById('open-cart').click();return false">View Cart</a><a href="#">Track My Orders</a><a href="#">Help</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer"><p>&copy; 2025 PyoShop. All Rights Reserved.</p></footer>
+
+    <!-- OVERLAY + DRAWERS -->
+    <div class="overlay" aria-hidden="true"></div>
+
+    <aside class="drawer drawer--wide" id="quick" aria-hidden="true" aria-label="Quick view">
+        <div class="drawer-head"><div><h3>Quick view</h3></div><button class="icon-btn" data-close type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+        <div class="drawer-body" id="qv-body"></div>
+    </aside>
+
+    <aside class="drawer" id="cart" aria-hidden="true" aria-label="Shopping cart">
+        <div class="drawer-head">
+            <div><h3>Your cart</h3><small id="cart-sub">0 pieces</small></div>
+            <button class="icon-btn" data-close type="button" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-body">
+            <div class="panel panel--cart" id="cart-items"></div>
+            <div class="panel panel--checkout">
+                <button class="chip" id="back-to-cart" type="button">Back to cart</button>
+                <form class="checkout-form" id="checkout-form" action="index.php" method="post">
+                    <h3 style="margin:1.4rem 0 .6rem;font-size:1.7rem">Delivery details</h3>
+                    <div class="checkout-summary" id="checkout-summary"></div>
+                    <label class="field"><input type="tel" name="phone" required placeholder="Phone" autocomplete="tel"></label>
+                    <label class="field"><input type="text" name="full_name" required placeholder="Full name" autocomplete="name"></label>
+                    <label class="field"><input type="text" name="city" required placeholder="City" autocomplete="address-level2"></label>
+                    <input type="hidden" name="order" id="order-json">
+                    <button class="btn btn--solid btn--block" type="submit" style="margin-top:1.6rem">Place order</button>
+                    <p class="note" style="margin-top:.8rem">You pay when your order arrives.</p>
+                </form>
+            </div>
+        </div>
+        <div class="drawer-foot panel--cart" id="cart-foot" hidden>
+            <div class="total"><span>Total</span><strong id="cart-total">$0.00</strong></div>
+            <p class="note">Free shipping. Pay on delivery.</p>
+            <button class="btn btn--solid btn--block" id="to-checkout" type="button">Checkout</button>
+            <button class="btn btn--ghost btn--block" data-close type="button">Keep shopping</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="loading-screen"><div class="spinner"></div></div>
+    <script src="javascript/shop.js"></script>
+</body>
+</html>
