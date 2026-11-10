@@ -22,6 +22,12 @@
   const photo = (p, n = 1) => `images/${p.folder}/pro${n}.jpg`;
   const off = p => Math.round((1 - p.price / p.old) * 100);
 
+  /* Sounds — same files as before: media/yes.mp3 on add, media/no.mp3 on remove.
+     play() is wrapped because browsers block audio until the first user click. */
+  const soundYes = new Audio('media/yes.mp3'), soundNo = new Audio('media/no.mp3');
+  soundYes.preload = soundNo.preload = 'auto';
+  const play = a => { try { a.currentTime = 0; a.play().catch(() => {}); } catch (e) {} };
+
   /* ---------------------------------------------------------
      2. Overlay + drawers (one open at a time)
      --------------------------------------------------------- */
@@ -61,10 +67,10 @@
     add(id, qty = 1) {
       const it = this.items.find(i => i.id === id);
       it ? it.qty = Math.min(99, it.qty + qty) : this.items.push({ id, qty });
-      this.commit(); bumpBadge();
+      this.commit(); bumpBadge(); play(soundYes);
     },
     set(id, qty) { qty < 1 ? this.remove(id) : (this.items.find(i => i.id === id).qty = Math.min(99, qty), this.commit()); },
-    remove(id) { this.items = this.items.filter(i => i.id !== id); this.commit(); },
+    remove(id) { this.items = this.items.filter(i => i.id !== id); this.commit(); play(soundNo); },
     count() { return this.items.reduce((n, i) => n + i.qty, 0); },
     total() { return this.items.reduce((s, i) => s + byId(i.id).price * i.qty, 0); }
   };
